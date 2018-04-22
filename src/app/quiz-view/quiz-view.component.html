@@ -1,0 +1,57 @@
+<div class="container mb-4" *ngIf="questionIndex === 1">
+  <h3>Do you like Apple or Google?</h3>
+  <form (change)="filterParams.os=$event.target.value">
+    <input type="radio" name="1" value="iOS"> Apple <br>
+    <input type="radio" name="1" value="Android"> Google <br>
+    <input type="radio" name="1" value=""> Do not care<br>
+  </form>
+</div>
+<div class="container mb-4" *ngIf="questionIndex === 2">
+  <h3>Do you store alot of music, photos, etc on your phone?</h3>
+  <form (change)="filterParams.storage=$event.target.value">
+    <input type="radio" name="2" value=""> I don't store much on my phone.<br>
+    <input type="radio" name="2" value="64"> I store a couple of things on my phone.<br>
+    <input type="radio" name="2" value="128"> I store a lot of things on my phone.<br>
+  </form>
+</div>
+<div class="container mb-4" *ngIf="questionIndex === 3">
+  <h3>Do you like having lots of apps running on you phone at once?</h3>
+  <form (change)="filterParams.ram=$event.target.value">
+    <input type="radio" name="3" value="4"> Yes<br>
+    <input type="radio" name="3" value="2"> Kind of<br>
+    <input type="radio" name="3" value=""> No<br>   
+  </form>
+</div>
+<div class="container mb-4" *ngIf="questionIndex === 4">
+  <h3>Do you take alot of selfies?</h3>
+  <form (change)="filterParams.front_camera=$event.target.value">
+    <input type="radio" name="4" value="16"> Yes <br>
+    <input type="radio" name="4" value="8"> A few <br>
+    <input type="radio" name="4" value=""> No<br>
+  </form>
+</div>
+<div class="container mb-4" *ngIf="questionIndex === 5">
+  <h3>Do you like taking pictures with your phone?</h3>
+  <form (change)="filterParams.back_camera=$event.target.value">
+    <input type="radio" name="5" value="16"> Yes <br>
+    <input type="radio" name="5" value="12"> A few <br>
+    <input type="radio" name="5" value=""> No<br>
+  </form>
+</div>
+<div class="container mb-4" *ngIf="questionIndex === 6">
+  <h3>What is your favorite color?</h3>
+  <input type="text" name="6" [(ngModel)]="filterParams.color"> <br>
+</div>
+<div class="container mb-4" *ngIf="questionIndex === 7">
+  <h3>Do you drop your phone alot?</h3>
+  <form (change)="filterParams.screen=$event.target.value">
+    <input type="radio" name="7" value="Corning Gorilla Glass 5"> Yes <br>
+    <input type="radio" name="7" value=""> No<br>
+  </form>
+</div>
+<div class="container mb-4" *ngIf="questionIndex != 7">
+  <button class="btn btn-primary" (click)="increaseIndex()">Next Question</button>
+</div>
+<div class="container" *ngIf="questionIndex === 7">
+  <button class="btn btn-success" (click)="submitQuiz()">Submit Quiz</button>
+</div>

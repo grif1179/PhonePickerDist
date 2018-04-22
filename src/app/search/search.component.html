@@ -1,0 +1,21 @@
+<div class="col-12 my-3">
+
+<div class="col-10 col-sm-6 col-lg-4 offset-1 offset-sm-3 offset-lg-4 my-3">
+	<h4 class="col-12 text-center">Search phone</h4>
+	
+	<form action="search" method="post">
+		<div class="d-flex col-12 my-3 justify-content-center">
+			<input type="text" name="phoneSearch" value="" class="w-100" placeholder="Search phone" #searchTerm>
+			<button type="submit" (click)="setSearchTerm(searchTerm.value)">
+			<i class="fa fa-search fa-1x"></i>
+			</button>
+		</div>		
+		<br />		
+		<div class="col-12 mb-3 text-center">
+			<a class="btn btn-outline-primary" routerLink="filter">Advanced Search</a>
+		</div>
+		<br />
+	</form>
+</div>
+
+</div>

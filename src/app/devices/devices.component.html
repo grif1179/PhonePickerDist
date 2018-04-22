@@ -1,0 +1,22 @@
+<h3 class="text-center mt-3 mb-3">Devices</h3>
+
+<br />
+<div class="span12 text-center">
+	<button class="btn btn-lg btn-outline-primary" (click)="routeToCompare()">Compare</button>
+</div>
+<br />
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let device of devices" class="col mb-4 d-flex align-items-center justify-content-center deviceContainer">
+      <div class="card" style="width: 18rem;">
+        <input type="checkbox" (change)="compareArrManager(device.slug)">
+        <img class="card-img-top scale-75" src="{{ device.thumbnail }}" alt="{{ device.title }}">
+        <div class="card-body">
+          <a routerLink="/devices/device/{{ device.slug }}">
+            <h4 class="d-flex align-items-center justify-content-center mt-3 mb-3 text-center equal-height">{{ device.title }}</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

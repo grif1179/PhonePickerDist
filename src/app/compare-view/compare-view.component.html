@@ -1,0 +1,119 @@
+<div class="d-flex col-12 flex-wrap">
+<div class="col-12 col-sm-6 col-lg-4 mb-3" *ngFor="let device of devices">
+
+<h2 class="text-center">{{ device.title }} Details</h2>
+
+<div class="container-fluid">
+
+<div class="col-12 col-md-10 offset-md-1">
+		
+		<h4 class="mt-3 mb-3 text-center">Top Features:</h4>
+		<br />
+		
+<!-- Specs row 1 -->
+		
+		<div class="row d-flex">
+		
+<!-- Material -->
+		
+			<div class="col-12 border-bottom">
+				<div class="">
+					<h5 class="text-center text-uppercase mt-3 mb-3">Material</h5>
+					<p class="text-center">{{ device.body }}</p>
+				</div>
+			</div><!-- /col-12.border-bottom -->
+
+<!-- Storage -->
+			
+			<div class="col-12 border-bottom">
+				<div class="">
+					<h5 class="text-center text-uppercase mt-3 mb-3">Storage</h5>
+					<p class="text-center">{{ device.storage }}</p>
+				</div>
+			</div><!-- /col-12 -->
+		
+<!-- Rear Camera -->
+		
+			<div class="col-12 border-bottom">
+				<div class="">
+					<h5 class="text-center text-uppercase mt-3 mb-3">Rear Camera</h5>
+					<p class="text-center">{{ device.back_camera }}</p>
+				</div>
+			</div><!-- /col-6.border-right -->
+			
+<!-- Front Camera -->
+			
+			<div class="col-12 border-bottom">
+				<div class="">
+					<h5 class="text-center text-uppercase mt-3 mb-3">Front Camera</h5>
+					<p class="text-center">{{ device.front_camera }}</p>
+				</div>
+			</div><!-- /col-12 -->
+		
+<!-- Display -->
+		
+			<div class="col-12 border-bottom">
+				<div class="">
+					<h5 class="text-center text-uppercase mt-3 mb-3">Display</h5>
+					<p class="text-center">{{ device.display }}</p>
+				</div>
+			</div><!-- /col-12.border-right -->
+
+<!-- Battery -->
+			
+			<div class="col-12 border-bottom">
+				<div class="">
+					<h5 class="text-center text-uppercase mt-3 mb-3">Battery</h5>
+					<p class="text-center">{{ device.battery }}</p>
+				</div>
+			</div><!-- /col-12 -->
+		
+		</div><!-- /row -->
+
+<!-- Specs row 4 -->
+		
+		<div class="row d-flex">
+
+<!-- all specs -->
+			<div class="col-12 p-0">
+				<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+	  				<ngb-panel title="See all features">
+					<ng-template ngbPanelContent>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Operating System:</span><span class="col-9 d-inline-block">{{ device.os }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Display:</span><span class="col-9 d-inline-block">{{ device.display }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Front Camera:</span><span class="col-9 d-inline-block">{{ device.front_camera }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Back Camera:</span><span class="col-9 d-inline-block">{{ device.back_camera }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">CPU:</span><span class="col-9 d-inline-block">{{ device.cpu }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">GPU:</span><span class="col-9 d-inline-block">{{ device.gpu }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Storage:</span><span class="col-9 d-inline-block">{{ device.storage }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">RAM:</span><span class="col-9 d-inline-block">{{ device.ram }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Length:</span><span class="col-9 d-inline-block">{{ device.length }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Width:</span><span class="col-9 d-inline-block">{{ device.width }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Height:</span><span class="col-9 d-inline-block">{{ device.depth }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Weight:</span><span class="col-9 d-inline-block">{{ device.weight }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Colors:</span><span class="col-9 d-inline-block">{{ device.colors }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Battery:</span><span class="col-9 d-inline-block">{{ device.battery }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">WiFi:</span><span class="col-9 d-inline-block">{{ device.wifi }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Bluetooth:</span><span class="col-9 d-inline-block">{{ device.bt }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">NFC:</span><span class="col-9 d-inline-block">{{ device.nfc }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Location:</span><span class="col-9 d-inline-block">{{ device.location }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Network:</span><span class="col-9 d-inline-block">{{ device.network }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Sensors:</span><span class="col-9 d-inline-block">{{ device.sensors }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">USB:</span><span class="col-9 d-inline-block">{{ device.usb }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">SIM:</span><span class="col-9 d-inline-block">{{ device.sim }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Body:</span><span class="col-9 d-inline-block">{{ device.body }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Screen:</span><span class="col-9 d-inline-block">{{ device.screen }}</span></p>
+						<p class="pb-2 border-bottom"><span class="col-3 d-inline-block">Price:</span><span class="col-9 d-inline-block">{{ device.price }}</span></p>
+					</ng-template>
+					</ngb-panel>
+				</ngb-accordion>
+			</div><!-- /col-12 -->
+		
+		</div><!-- /row -->
+		
+	</div><!-- /col-12 -->
+	
+</div> <!-- /container -->
+
+</div><!-- /device -->
+</div>

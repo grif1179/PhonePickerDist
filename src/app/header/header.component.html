@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top" id="navigation" role="navigation">
+
+<div class="container-fluid text-center">
+
+	<div class="col-9 col-sm-6 text-left">
+		<h2 class="d-inline-block text-white pl-0 py-2">PhonePicker</h2>
+	</div>
+
+	<div class="col-3 col-sm-6 d-block text-right d-sm-flex justify-content-around">
+		<a class="btn col-4 nav-link d-none d-sm-block text-white" href="#" routerLink="dashboard">Home</a>
+		<a class="btn col-4 nav-link d-none d-sm-block text-white" href="#" routerLink="devices">Devices</a>
+		<a class="btn col-4 nav-link d-none d-sm-block text-white" href="#" routerLink="quiz">Take Quiz</a>
+	  	
+		<div ngbDropdown placement="bottom-right" class="d-inline-block d-sm-none">
+			<button class="navbar-toggler float-right d-sm-none" type="button" id="dropdownNavigation" ngbDropdownToggle>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div ngbDropdownMenu aria-labelledby="dropdownNavigation">
+				<button class="dropdown-item" routerLink="dashboard">Home</button>
+				<button class="dropdown-item" routerLink="devices">Devices</button>
+				<button class="dropdown-item" routerLink="quiz">Take Quiz</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</nav>

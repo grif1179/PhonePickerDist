@@ -1,0 +1,202 @@
+<h3 class="text-center mt-3 mb-3">Filter Options</h3>
+
+<hr>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 col-sm-3 order-1 text-center">
+      <div class="select-container no-after">
+        <h5>OS: </h5>
+         <input type="text" name="osSearch" [(ngModel)]="filterParams.os" placeholder="OS">        
+      </div>
+    </div>
+    <div class="col-6 col-sm-3 order-3 order-sm-2 text-center">
+      <div class="select-container">
+        <h5>Storage: </h5>
+        <select (change)="filterParams.storage=$event.target.value">
+            <option value=""></option>
+            <option value="8">8 GB</option>
+            <option value="16">16 GB</option>
+            <option value="32">32 GB</option>
+            <option value="64">64 GB</option>
+            <option value="128">128 GB</option>
+            <option value="256">256 GB</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-6 col-sm-3 order-4 order-sm-3 text-center">
+      <div class="select-container">
+        <h5>RAM: </h5>
+        <select (change)="filterParams.ram=$event.target.value">
+            <option value=""></option>
+            <option value="128 MB">128 MB</option>
+            <option value="256 MB">256 MB</option>
+            <option value="512 MB">512 MB</option>
+            <option value="1 GB">1 GB</option>
+            <option value="1.5 GB">1.5 GB</option>
+            <option value="2 GB">2 GB</option>
+            <option value="3 GB">3 GB</option>
+            <option value="4 GB">4 GB</option>
+            <option value="6 GB">6 GB</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-6 col-sm-3 order-2 order-sm-4 text-center">
+      <div class="select-container no-after">
+        <h5>Display: </h5>
+        <input type="text" name="displaySearch" [(ngModel)]="filterParams.display" placeholder="display search">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-6 col-sm-3 text-center">
+      <div class="select-container">
+        <h5>Front Camera: </h5>
+        <select (change)="filterParams.front_camera=$event.target.value">
+            <option value=""></option>
+            <option value="1.2 MP">1.2 MP</option>
+            <option value="1.9 MP">1.9 MP</option>
+            <option value="2 MP">2 MP</option>
+            <option value="3.7 MP">3.7 MP</option>
+            <option value="4 MP">4 MP</option>
+            <option value="5 MP">5 MP</option>
+            <option value="7 MP">7 MP</option>
+            <option value="8 MP">8 MP</option>
+            <option value="13 MP">13 MP</option>
+            <option value="16 MP">16 MP</option>
+        </select>
+      </div>
+    </div>   
+    <div class="col-6 col-sm-3 text-center">
+      <div class="select-container">
+        <h5>Back Camera: </h5>
+        <select (change)="filterParams.back_camera=$event.target.value">
+            <option value=""></option>
+            <option value="2 MP">2 MP</option>
+            <option value="3.15 MP">3.15 MP</option>
+            <option value="5 MP">5 MP</option>
+            <option value="5 MP">5 MP</option>
+            <option value="8 MP">8 MP</option>
+            <option value="12 MP">12 MP</option>
+            <option value="12.2 MP">12.2 MP</option>
+            <option value="12.3 MP">12.3 MP</option>
+            <option value="13 MP">13 MP</option>
+            <option value="16 MP">16 MP</option>
+            <option value="20 MP">20 MP</option>
+            <option value="21 MP">21 MP</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-6 col-sm-3 text-center">
+      <div class="select-container no-after">
+        <h5>CPU: </h5>
+        <input type="text" name="cpuSearch" [(ngModel)]="filterParams.cpu" placeholder="cpu">
+      </div>
+    </div>
+    <div class="col-6 col-sm-3 text-center">
+      <div class="select-container no-after">
+        <h5>GPU: </h5>
+        <input type="text" name="gpuSearch" [(ngModel)]="filterParams.gpu" placeholder="gpu">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-6 col-sm-3 text-center">
+      <div class="select-container no-after">
+        <h5>Length of Phone: </h5>
+        <input type="text" name="lengthSearch" [(ngModel)]="filterParams.length" placeholder="Length of Phone">
+      </div>
+    </div>
+    <div class="col-6 col-sm-3 text-center">
+      <div class="select-container no-after">
+        <h5>Width of Phone: </h5>
+        <input type="text" name="widthSearch" [(ngModel)]="filterParams.width" placeholder="Width of Phone">
+      </div>
+    </div>
+    <div class="col-6 col-sm-3 text-center">
+      <div class="select-container no-after">
+        <h5>Depth of Phone: </h5>
+        <input type="text" name="depthSearch" [(ngModel)]="filterParams.depth" placeholder="Depth of Phone">
+      </div>
+    </div>
+    <div class="col-6 col-sm-3 text-center">
+      <div class="select-container no-after">
+        <h5>Weight of Phone: </h5>
+        <input type="text" name="weigthSearch" [(ngModel)]="filterParams.weight" placeholder="Weight of Phone">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-6 col-sm-3 order-1 text-center">
+      <div class="select-container no-after">
+        <h5>Color of Phone: </h5>
+        <input type="text" name="colorSearch" [(ngModel)]="filterParams.color" placeholder="Color of Phone">
+      </div>
+    </div>
+    <div class="col-6 offset-3 offset-sm-0 order-3 order-sm-2 text-center">
+      <div class="select-container">
+        <h5>Location Options: </h5>
+        <select class="mb-3" (change)="filterParams.location=$event.target.value">
+            <option value=""></option>
+            <option value="No">No</option>
+            <option value="Yes, with A-GPS">Yes, with A-GPS</option>
+            <option value="Yes, with A-GPS, GLONASS">Yes, with A-GPS, GLONASS</option>
+            <option value="Yes, with A-GPS, GLONASS, GALILEO">Yes, with A-GPS, GLONASS, GALILEO</option>
+            <option value="Yes, with A-GPS, GLONASS, BDS">Yes, with A-GPS, GLONASS, BDS</option>
+            <option value="Yes, with A-GPS, GLONASS, BDS, GALILEO">Yes, with A-GPS, GLONASS, BDS, GALILEO</option>
+            <option value="Yes, with A-GPS, GLONASS, GALILEO, QZSS">Yes, with A-GPS, GLONASS, GALILEO, QZSS</option>
+            <option value="Yes, with A-GPS, GLONASS/ BDS (region dependent)">Yes, with A-GPS, GLONASS/ BDS (region dependent)</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-6 col-sm-3 order-2 order-sm-3 text-center">
+      <div class="select-container no-after">
+        <h5>Battery: </h5>
+        <input type="text" name="batterySearch" [(ngModel)]="filterParams.battery" placeholder="Battery">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-6 text-center">
+      <div class="select-container">
+        <h5 class="dbl-line-455">Screen of Phone: </h5>
+        <select (change)="filterParams.screen=$event.target.value">
+          <option value=""></option>
+          <option value="Corning Gorilla Glass 3">Corning Gorilla Glass 3</option>
+          <option value="Corning Gorilla Glass 4">Corning Gorilla Glass 4</option>
+          <option value="Corning Gorilla Glass 5">Corning Gorilla Glass 5</option>
+          <option value="Ion-strengthened glass, oleophobic coating">Ion-strengthened glass, oleophobic coating</option>
+          <option value="Scratch-resistant glass, oleophobic coating">Scratch-resistant glass, oleophobic coating</option>
+          <option value="Corning Gorilla Glass, oleophobic coating">Corning Gorilla Glass, oleophobic coating</option>
+          <option value="Corning Gorilla Glass (unspecified version)">Corning Gorilla Glass (unspecified version)</option>
+          <option value="Shatterproof">Shatterproof</option>
+        </select>
+      </div>
+    </div>  
+    <div class="col-6 text-center">
+      <div class="select-container">
+        <h5>Network Options of Phone:</h5>
+        <select (change)="filterParams.network=$event.target.value">
+          <option value=""></option>
+          <option value="GSM">GSM</option>
+          <option value="GSM / HSPA">GSM / HSPA</option>
+          <option value="GSM / HSPA / LTE">GSM / HSPA / LTE</option>
+          <option value="GSM / HSPA / EVDO / LTE">GSM / HSPA / EVDO / LTE</option>
+          <option value="GSM / CDMA / HSPA / LTE">GSM / CDMA / HSPA / LTE</option>
+          <option value="GSM / CDMA / HSPA / EVDO">GSM / CDMA / HSPA / EVDO</option>
+          <option value="GSM / CDMA / HSPA / EVDO / LTE">GSM / CDMA / HSPA / EVDO / LTE</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-lg btn-outline-primary" (click)="applyFilter()">Filter</button>
+    </div>
+  </div>
+</div>

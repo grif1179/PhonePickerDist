@@ -1,0 +1,17 @@
+.bg-light { background-color: rgba(0,0,0,.03); }
+
+/*
+***************** media 768
+*/
+
+@media screen and (min-width: 768px) {  }
+
+/*
+***************** media 992
+*/
+
+@media screen and (min-width: 992px) {
+	.img-wrap { position: absolute; }
+	.scale-one-and-half-lg { transform: scale(1.5); }
+	.top-10-lg { top: 10rem; }
+}
